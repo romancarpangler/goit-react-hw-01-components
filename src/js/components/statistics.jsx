@@ -16,3 +16,8 @@ export const Statistics = ({ statistics }) => {
     </section>
   );
 };
+Statistics.propTypes = {
+  statistics: PropTypes.arrayOf(
+    PropTypes.shape({ id: PropTypes.string.isRequired })
+  ).isRequired,
+};

@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type';
 import PropTypes from 'prop-types';
 
 export const Transaction = ({ transaction }) => {
@@ -24,4 +25,15 @@ export const Transaction = ({ transaction }) => {
       </tbody>
     </table>
   );
+};
+
+Transaction.propTypes = {
+  transaction: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };

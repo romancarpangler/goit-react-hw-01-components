@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Data = ({ friend: { avatar, name, isOnline } }) => {
   return (
     <>
@@ -6,4 +8,12 @@ export const Data = ({ friend: { avatar, name, isOnline } }) => {
       <p className="name">{name}</p>
     </>
   );
+};
+
+Data.propTypes = {
+  friend: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+  }).isRequired,
 };
