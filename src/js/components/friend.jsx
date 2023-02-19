@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const Data = ({ friend }) => {
-  const { avatar, name, isOnline } = friend;
+  const { avatar, name } = friend;
   return (
     <>
       <span className="status"></span>
@@ -18,3 +18,4 @@ Data.propTypes = {
     isOnline: PropTypes.bool.isRequired,
   }).isRequired,
 };
+// isOnline;
