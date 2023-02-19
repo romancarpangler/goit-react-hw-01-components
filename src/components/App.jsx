@@ -1,7 +1,7 @@
-import { Profile } from 'js/components/profile';
-import { Statistics } from 'js/components/statistics';
-import { FriendList } from 'js/components/friends';
-import { Transaction } from 'js/components/transaction';
+import { Profile } from 'js/profile';
+import { Statistics } from 'js/statistics';
+import { FriendList } from 'js/friends';
+import { Transaction } from 'js/transaction';
 
 import user from '../data/user';
 import statistics from '../data/statistics';
@@ -18,7 +18,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics statistics={statistics} />
+      <Statistics title="Upload stats" statistics={statistics} />
       <FriendList friends={friends} />
       <Transaction transaction={transaction} />
     </div>

@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import css from '../css/friends.module.css';
 
 export const Data = ({ friend }) => {
-  const { avatar, name } = friend;
+  const { avatar, name, isOnline } = friend;
   return (
     <>
-      <span className="status"></span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <span className={`${css.status} ${css[isOnline]}`}></span>
+      <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
+      <p className={css.name}>{name}</p>
     </>
   );
 };
@@ -18,4 +19,3 @@ Data.propTypes = {
     isOnline: PropTypes.bool.isRequired,
   }).isRequired,
 };
-// isOnline;

@@ -1,14 +1,15 @@
 import { Data } from './statistic';
 import PropTypes from 'prop-types';
+import css from '../css/statistics.module.css';
 
-export const Statistics = ({ statistics }) => {
+export const Statistics = ({ title, statistics }) => {
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+    <section className={css.statistics}>
+      {title && <h2 className={css.title}>{title}</h2>}
 
-      <ul className="stat-list">
+      <ul className={css.stats__list}>
         {statistics.map(statistic => (
-          <li key={statistic.id}>
+          <li key={statistic.id} className={css.stats}>
             <Data statistic={statistic} />
           </li>
         ))}
