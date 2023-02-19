@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-export const Data = ({ friend: { avatar, name, isOnline } }) => {
+export const Data = ({ friend }) => {
+  const { avatar, name, isOnline } = friend;
   return (
     <>
       <span className="status"></span>

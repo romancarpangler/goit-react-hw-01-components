@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-export const Data = ({ statistic: { label, percentage } }) => {
+export const Data = ({ statistic }) => {
+  const { label, percentage } = statistic;
   return (
     <>
       <span className="label">{label}</span>
